@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh‑CN">
+<head>
+<meta charset="utf‑8"/>
+<title>AP2 Solar System</title>
+<style>
+body{margin:0;display:flex;}
+#canvas{width:80vw;height:100vh;display:block;}
+#panel{width:20vw;padding:12px;font‑size:14px;box‑sizing:border‑box;}
+.control{margin:8px 0;}
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div id="panel">
+<h3>太阳系控制面板</h3>
+<div class="control">
+  <label>公转速度 <input type="range" id="orbitSpeed" min="0" max="3" step="0.1" value="1"></label>
+</div>
+<div class="control">
+  <label>自转速度 <input type="range" id="spinSpeed" min="0" max="3" step="0.1" value="1"></label>
+</div>
+<div class="control">
+  <label>地球轴倾角 <input type="range" id="earthTilt" min="0" max="45" step="0.5" value="23.5"></label>
+</div>
+<div class="control">
+  <label><input type="checkbox" id="showOrbit">显示轨道线</label>
+</div>
+<div>
+<p>按键：</p>
+<ul>
+<li>O：切换正交/透视投影</li>
+<li>空格：暂停/继续相机漫游</li>
+<li>鼠标拖拽：手动旋转视角</li>
+</ul>
+</div>
+</div>
+
+<script type="module" src="js/scene.js"></script>
+<script type="module" src="js/camera.js"></script>
+<script type="module" src="js/ui.js"></script>
+<script type="module" src="js/main.js"></script>
+
+
+</body>
+</html>
